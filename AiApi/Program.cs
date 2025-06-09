@@ -2,7 +2,11 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.AI;
 using OpenAI;
 
-var builder = WebApplication.CreateBuilder(args);
+var builder = WebApplication.CreateBuilder(new WebApplicationOptions
+{
+    Args = args,
+    ContentRootPath = Directory.GetCurrentDirectory()
+});
 
 // Swagger & API versioning
 builder.Services.AddEndpointsApiExplorer();
@@ -14,13 +18,10 @@ builder.Services.AddApiVersioning(options =>
     options.ReportApiVersions = true;
 });
 
-// Load secrets
-var config = new ConfigurationBuilder()
-    .AddUserSecrets<Program>()
-    .Build();
+builder.Configuration.AddEnvironmentVariables(); 
 
-string? model = config["ModelName"];
-string? key = config["OpenAIKey"];
+var key = builder.Configuration["OpenAIKey"];
+var model = builder.Configuration["ModelName"];
 
 if (string.IsNullOrWhiteSpace(model) || string.IsNullOrWhiteSpace(key))
 {
@@ -35,11 +36,9 @@ IChatClient chatClient = new OpenAIClient(key)
 var app = builder.Build();
 
 // Swagger UI
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
+app.UseSwagger();
+app.UseSwaggerUI();
+
 
 // System prompt (AI personality)
 var systemMessage = new ChatMessage(ChatRole.System, """

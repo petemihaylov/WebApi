@@ -1,0 +1,64 @@
+# .NET build artifacts
+bin/
+obj/
+app.publish/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# User-specific files
+*.user
+*.vspscc
+*.vssscc
+
+# VS Code settings
+.vscode/
+
+# Docker artifacts
+**/Dockerfile
+**/docker-compose*.yml
+*.tgz
+
+# Secrets and environment files
+secrets.json
+.env
+*.secret
+
+# dotnet user-secrets
+**/.vs/
+**/.idea/
+**/.user/
+
+# Logs
+*.log
+
+# Runtime files
+*.pid
+*.mdb
+
+# Publish output
+/app/publish/
+publish/
+
+# Others
+*.db
+*.sqlite
+*.swp
+_ReSharper*/
+*.ncrunchproject
+*.ndpend*
+*.DotSettings.user
+
+# JetBrains Rider
+.idea/
+
+# macOS-specific
+.DS_Store
+
+# Node (if you have Swagger UI customization)
+node_modules/
+
+# Test result files
+TestResults/
+coverage/

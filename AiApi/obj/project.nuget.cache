@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "PjhvgFt9PCYemD1+sTGHhblRzUmEq6sGptvdmny1ZQpG7eNvFvnB14GUqbO93V8eZ9otdiTiORNbaAXfvi2GYA==",
+  "dgSpecHash": "piwpqDvaiEhr4bHQi3uo0Av3Mp0jn8zKcf9WtkEhrPsI6kwkt2BGRGpTSR/zcVL7FjOciX65AtmjbFhaXYouGw==",
   "success": true,
-  "projectFilePath": "/Users/petemihaylov/Desktop/git/AiApi/AiAPI/AiAPI.csproj",
+  "projectFilePath": "/Users/petemihaylov/Desktop/git/AiApi/AiApi/AiApi.csproj",
   "expectedPackageFiles": [
     "/Users/petemihaylov/.nuget/packages/microsoft.aspnetcore.mvc.versioning/5.1.0/microsoft.aspnetcore.mvc.versioning.5.1.0.nupkg.sha512",
     "/Users/petemihaylov/.nuget/packages/microsoft.aspnetcore.openapi/8.0.3/microsoft.aspnetcore.openapi.8.0.3.nupkg.sha512",

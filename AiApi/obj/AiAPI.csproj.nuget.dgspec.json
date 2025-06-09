@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/petemihaylov/Desktop/git/AiApi/AiAPI/AiAPI.csproj": {}
+    "/Users/petemihaylov/Desktop/git/AiApi/AiApi/AiApi.csproj": {}
   },
   "projects": {
-    "/Users/petemihaylov/Desktop/git/AiApi/AiAPI/AiAPI.csproj": {
+    "/Users/petemihaylov/Desktop/git/AiApi/AiApi/AiApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/petemihaylov/Desktop/git/AiApi/AiAPI/AiAPI.csproj",
-        "projectName": "AiAPI",
-        "projectPath": "/Users/petemihaylov/Desktop/git/AiApi/AiAPI/AiAPI.csproj",
+        "projectUniqueName": "/Users/petemihaylov/Desktop/git/AiApi/AiApi/AiApi.csproj",
+        "projectName": "AiApi",
+        "projectPath": "/Users/petemihaylov/Desktop/git/AiApi/AiApi/AiApi.csproj",
         "packagesPath": "/Users/petemihaylov/.nuget/packages/",
-        "outputPath": "/Users/petemihaylov/Desktop/git/AiApi/AiAPI/obj/",
+        "outputPath": "/Users/petemihaylov/Desktop/git/AiApi/AiApi/obj/",
         "projectStyle": "PackageReference",
         "centralPackageVersionsManagementEnabled": true,
         "configFilePaths": [

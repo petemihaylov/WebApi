@@ -56,3 +56,4 @@
 /Users/petemihaylov/Desktop/git/AiApi/AiAPI/obj/Debug/net8.0/AiAPI.genruntimeconfig.cache
 /Users/petemihaylov/Desktop/git/AiApi/AiAPI/obj/Debug/net8.0/ref/AiAPI.dll
 /Users/petemihaylov/Desktop/git/AiApi/AiApi/bin/Debug/net8.0/Microsoft.AspNetCore.Mvc.Versioning.dll
+/Users/petemihaylov/Desktop/git/AiApi/AiApi/obj/Debug/net8.0/AiApi.sourcelink.json
