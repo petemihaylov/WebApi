@@ -10,29 +10,41 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
 
+    env:
+      AWS_REGION: eu-central-1              
+      ECR_REPOSITORY: aiapi               
+      IMAGE_TAG: latest                  
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Setup .NET
-        uses: actions/setup-dotnet@v4
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v4
         with:
-          dotnet-version: '8.0.x'
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ env.AWS_REGION }}
 
-      - name: Restore dependencies
-        run: dotnet restore
+      - name: Log in to Amazon ECR
+        id: login-ecr
+        uses: aws-actions/amazon-ecr-login@v2
 
-      - name: Build
-        run: dotnet build --configuration Release --no-restore
+      - name: Build, tag, and push image to ECR
+        run: |
+          ECR_REGISTRY="${{ steps.login-ecr.outputs.registry }}"
+          IMAGE_URI="$ECR_REGISTRY/${{ env.ECR_REPOSITORY }}:${{ env.IMAGE_TAG }}"
 
-      - name: Test
-        run: dotnet test --no-build --verbosity normal
+          echo "Building image..."
+          docker build -t $IMAGE_URI .
 
-      - name: Publish
-        run: dotnet publish AiAPI/AiAPI.csproj -c Release -o ./publish
+          echo "Pushing image to ECR..."
+          docker push $IMAGE_URI
 
-      - name: Upload artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: dotnet-api
-          path: ./publish
+      - name: Deploy to ECS (optional)
+        run: |
+          echo "Update ECS service here or via Terraform/CDK"
+          # Example: aws ecs update-service --cluster my-cluster --service my-service --force-new-deployment
