@@ -1,0 +1,118 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/petemihaylov/Desktop/git/AiApi/AiAPI/AiAPI.csproj": {}
+  },
+  "projects": {
+    "/Users/petemihaylov/Desktop/git/AiApi/AiAPI/AiAPI.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/petemihaylov/Desktop/git/AiApi/AiAPI/AiAPI.csproj",
+        "projectName": "AiAPI",
+        "projectPath": "/Users/petemihaylov/Desktop/git/AiApi/AiAPI/AiAPI.csproj",
+        "packagesPath": "/Users/petemihaylov/.nuget/packages/",
+        "outputPath": "/Users/petemihaylov/Desktop/git/AiApi/AiAPI/obj/",
+        "projectStyle": "PackageReference",
+        "centralPackageVersionsManagementEnabled": true,
+        "configFilePaths": [
+          "/Users/petemihaylov/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "/usr/local/share/dotnet/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "allWarningsAsErrors": true,
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Mvc.Versioning": {
+              "target": "Package",
+              "version": "[5.1.0, )",
+              "versionCentrallyManaged": true
+            },
+            "Microsoft.AspNetCore.OpenApi": {
+              "target": "Package",
+              "version": "[8.0.3, )",
+              "versionCentrallyManaged": true
+            },
+            "Microsoft.Extensions.AI.OpenAI": {
+              "target": "Package",
+              "version": "[9.5.0-preview.1.25265.7, )",
+              "versionCentrallyManaged": true
+            },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[9.0.5, )",
+              "versionCentrallyManaged": true
+            },
+            "Microsoft.Extensions.Configuration.UserSecrets": {
+              "target": "Package",
+              "version": "[9.0.5, )",
+              "versionCentrallyManaged": true
+            },
+            "OpenAI": {
+              "target": "Package",
+              "version": "[2.2.0-beta.4, )",
+              "versionCentrallyManaged": true
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.4.0, )",
+              "versionCentrallyManaged": true
+            }
+          },
+          "centralPackageVersions": {
+            "Microsoft.AspNetCore.Mvc.Versioning": "[5.1.0, )",
+            "Microsoft.AspNetCore.OpenApi": "[8.0.3, )",
+            "Microsoft.Extensions.AI.OpenAI": "[9.5.0-preview.1.25265.7, )",
+            "Microsoft.Extensions.Configuration": "[9.0.5, )",
+            "Microsoft.Extensions.Configuration.UserSecrets": "[9.0.5, )",
+            "OpenAI": "[2.2.0-beta.4, )",
+            "Swashbuckle.AspNetCore": "[6.4.0, )"
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.202/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
